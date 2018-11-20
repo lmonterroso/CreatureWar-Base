@@ -1,7 +1,7 @@
 
 /**
  * Elf is a creature with HP between 8 and 25 and STR between 25 and 5.
- *Elf also has a 10% chance to deal double damage when attacking.
+ * Elf also has a 10% chance to deal double damage when attacking.
  * @author Luis Monterroso
  * @version November 11 2019
  */
@@ -37,5 +37,13 @@ public class Elf extends Creature
             return 2 * super.damage();
         else 
             return super.damage();
+    }
+    
+    /**
+     *  gives the name of the creatures race 
+     *  @return the race of the creature(the name of the class). 
+     */
+    public String toString(){
+        return "Elf";
     }
 }

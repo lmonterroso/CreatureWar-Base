@@ -12,6 +12,8 @@ public class Demon extends Creature
     private static final int MIN_DEMON_HP = 15;
     private static final int MAX_DEMON_STR = 15;
     private static final int MIN_DEMON_STR = 10;
+    
+    
     /**
      * Constructor for objects of class Demon
      */
@@ -23,6 +25,17 @@ public class Demon extends Creature
         );
     }
     
+    /**
+     * Create a Demon with a given strength and hit point level. 
+     * Store max hitpoints to allow for healing to be implemented later
+     * Heals must never allow for more hit points than the Demon started
+     * with
+     * @param str the strength of the Demon, used to calculate damage
+     * @param hp the health of the Demon at the start of the simulation, and the current health levels during battle
+     */
+    public Demon(int hp, int str) {
+       super(hp,str);
+    }
     /**
      * @override
      * Calculates the damage done this round, 
@@ -36,5 +49,13 @@ public class Demon extends Creature
             return 50 + super.damage();
         else 
             return super.damage();
+    }
+    
+    /**
+     *  gives the name of the creatures race 
+     *  @return the race of the creature(the name of the class). 
+     */
+    public String toString(){
+        return "Demon";
     }
 }

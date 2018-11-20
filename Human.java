@@ -28,5 +28,13 @@ public class Human extends Creature
         );
           
     }
+    
+    /**
+     *  gives the name of the creatures race 
+     *  @return the race of the creature(the name of the class). 
+     */
+    public String toString(){
+        return "Human";
+    }
 
 }

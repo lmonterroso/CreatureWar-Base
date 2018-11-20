@@ -5,7 +5,7 @@
  * @author Luis Monterroso
  * @version November 11 2019
  */
-public class Balrog extends Creature
+public class Balrog extends Demon
 {
     private static final int MAX_BALROG_HP = 200;
     private static final int MIN_BALROG_HP = 80;
@@ -32,5 +32,13 @@ public class Balrog extends Creature
     public int damage()
     {   
         return super.damage() + super.damage();
+    }
+    
+    /**
+     *  gives the name of the creatures race 
+     *  @return the race of the creature(the name of the class). 
+     */
+    public String toString(){
+        return "Balrog";
     }
 }
